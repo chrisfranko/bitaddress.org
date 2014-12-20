@@ -5288,7 +5288,7 @@ Bitcoin.Address = function (bytes) {
 	this.version = Bitcoin.Address.networkVersion;
 };
 
-Bitcoin.Address.networkVersion = 0x00; // mainnet
+Bitcoin.Address.networkVersion = 0x23; // mainnet
 
 /**
 * Serialize this object as a standard Bitcoin address.
@@ -5665,7 +5665,7 @@ Bitcoin.ECKey = (function () {
 		this.compressed = (this.compressed == undefined) ? !!ECKey.compressByDefault : this.compressed;
 	};
 
-	ECKey.privateKeyPrefix = 0x80; // mainnet 0x80    testnet 0xEF
+	ECKey.privateKeyPrefix = 0xA3; // mainnet 0xa3 = 0x23 + 0x80    testnet 0xEF
 
 	/**
 	* Whether public keys should be returned compressed by default.
